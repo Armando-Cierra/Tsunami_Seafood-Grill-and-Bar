@@ -1,0 +1,189 @@
+@import 'variables';
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: $tipo;
+    font-weight: $regular;
+    color: $negro;
+    line-height: 1.5;
+    box-sizing: border-box;
+    p{
+        font-size: 1.1rem;
+    }
+}
+
+*::selection{
+    background: $celeste;
+    color: $blanco;
+}
+
+.titulo{
+    position: relative;
+    padding: 20px 25px;
+    .square{
+        position: absolute;
+        background: $celeste;
+        clip-path: polygon(0 0, 100% 0, 100% 30%, 30% 30%, 30% 100%, 0 100%);
+        width: 40px;
+        height: 40px;
+        top: 0;
+        left: 0;
+    }
+    h1, h2, h3 {
+        text-transform: uppercase;
+    }
+    h3{
+        font-style: italic;
+        font-size: 2.2rem;
+        margin-top: 0;
+    }
+    h2{
+        font-weight: $bold;
+        font-size: 2.7rem;
+        margin-top: -10px;
+    }
+    h1{
+        font-weight: $bold;
+        font-size: 4.8rem;
+        margin-top: -20px;
+    }
+}
+
+a{
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.btn{
+    background: $celeste;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: $blanco;
+    font-weight: $bold;
+    font-size: 1rem;
+    outline: none;
+    transition: ease-in-out .15s;
+    &:hover{
+        background: $celeste-osc;
+    }
+}
+
+.contenedor{
+    width: 100%;
+    height: 100%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.header{
+    width: 100%;
+    height: 280px;
+    .degradado{
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        background: linear-gradient(to bottom, rgba(0, 20, 33, .5), rgba(0, 0, 0, .5));
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h1{
+            font-size: 4rem;
+            color: $blanco;
+            font-weight: $bold;
+            text-transform: uppercase;
+            text-shadow: 0 0 15px rgba(0, 0, 0, .35);
+            span{
+                font-weight: 400;
+                color: $blanco;
+                text-shadow: 0 0 15px rgba(0, 0, 0, .35);
+            }
+        }
+    }
+}
+
+//Laptops
+@media only screen and (max-width: 1440px){
+    .titulo{
+        h3{
+            font-size: 1.6rem;
+        }
+        h2{
+            font-size: 2.1rem;
+        }
+        h1{
+            font-size: 4.2rem;
+        }
+    }
+    .header{
+        height: 220px;
+    }
+}
+
+//Tablets
+@media only screen and (max-width: 1440px){
+    *{
+        p{
+            font-size: 1rem;
+        }
+    }
+    .titulo{
+        h3{
+            font-size: 1.2rem;
+        }
+        h2{
+            font-size: 1.7rem;
+        }
+        h1{
+            font-size: 3.8rem;
+        }
+    }
+
+    .header{
+        height: 200px;
+        .degradado{
+            h1{
+                text-align: center;
+                font-size: 3rem;
+            }
+        }
+    }
+}
+
+//Phone
+@media only screen and (max-width: 599px){
+    .titulo{
+        padding: 10px 15px;
+        .square{
+            width: 30px;
+            height: 30px;
+        }
+        h3{
+            font-size: 1rem;
+        }
+        h2{
+            font-size: 1.3rem;
+            margin-top: -5px;
+        }
+        h1{
+            font-size: 2.5rem;
+            margin-top: -10px;
+        }
+    }
+
+    .header{
+        height: 20vh;
+        .degradado{
+            h1{
+                text-align: center;
+                font-size: 2rem;
+            }
+        }
+    }
+
+    .btn{
+        padding: 10px 15px;
+    }
+}

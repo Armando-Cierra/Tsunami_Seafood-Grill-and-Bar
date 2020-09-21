@@ -1,0 +1,50 @@
+#animacionOlas {
+    svg {
+        height: 125px;
+        width: 100%;
+    }
+    .wave-divider {
+        padding-top: 0px;
+        line-height: 0;
+        ::-moz-selection {
+            background-color: salmon;
+            color: white;
+        }
+        ::selection {
+            background-color: salmon;
+            color: white;
+        }
+        .parallax-wave>use {
+            -webkit-animation: move-forever 15s ease infinite;
+            animation: move-forever 15s linear infinite;
+            -webkit-font-smoothing: subpixel-antialiased;
+            -webkit-transform: translateZ(0) scale(1.0, 1.0);
+        }
+        .parallax-wave>use:nth-child(1) {
+            -webkit-animation-delay: -4s;
+            animation-delay: -4s;
+        }
+        .parallax-wave>use:nth-child(2) {
+            -webkit-animation-delay: -4s;
+            animation-delay: -4s;
+            -webkit-animation-duration: 8s;
+            animation-duration: 8s;
+        }
+        .parallax-wave>use:nth-child(3) {
+            -webkit-animation-delay: -8s;
+            animation-delay: -8s;
+            -webkit-animation-duration: 6s;
+            animation-duration: 6s;
+        }
+    }
+    @keyframes move-forever {
+        0% {
+            -webkit-transform: translate(-90px, 0%);
+            transform: translate(-90px, 0%);
+        }
+        100% {
+            -webkit-transform: translate(85px, 0%);
+            transform: translate(85px, 0%);
+        }
+    }
+ }

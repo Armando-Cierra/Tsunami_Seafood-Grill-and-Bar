@@ -1,0 +1,87 @@
+.menu{
+    width: 100%;
+    height: 90px;
+    background: $blanco;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .25);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: ease-in-out .25s;
+    .contenedor{
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .logo{
+            height: 85%;
+            width: 70px;
+            background: url("../img/logos/negro.png");
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        ul{
+            height: 100%;
+            list-style: none;
+            display: flex;
+            li{
+                height: 100%;
+                a{
+                    display: inline-block;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+                    padding: 0 15px;
+                    transition: ease-in-out .15s;
+                    &:hover{
+                        color: $celeste;
+                    }
+                    &:hover::after{
+                        width: 100%;
+                        left: 0;
+                    }
+                    &:after{
+                        content: '';
+                        width: 0;
+                        height: 3px;
+                        background: $celeste;
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%;
+                        transition: ease-in-out .15s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*.transparente{
+    background: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    .contenedor{
+        .logo{
+            background: url("../img/logos/blanco.png");
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        ul{
+            li{
+                a{
+                    color: $blanco;
+                    text-shadow: 0 0 10px rgba(0, 0, 0, .5);
+                }
+            }
+        }
+    }
+}*/
+
+@media only screen and(max-width: 800px){
+    nav{
+        display: none;
+    }
+}

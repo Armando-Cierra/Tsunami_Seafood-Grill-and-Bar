@@ -1,0 +1,114 @@
+.acerca{
+    width: 100%;
+    padding: 60px 0;
+    padding-bottom: 22vh;
+    background: linear-gradient(to bottom, $blanco 25%, $gris);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .movil{
+        display: none;
+    }
+    .titulo{
+        margin-bottom: 120px;
+    }
+    .contenido{
+        width: 100%;
+        height: 30vh;
+        background: $blanco;
+        box-shadow: 0 0 25px rgba(0, 0, 0, .10);
+        .contenedor{
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .imagenes{
+                height: 175%;
+                width: 40%;
+                position: relative;
+                .img{
+                    width: 70%;
+                    height: 50%;
+                    overflow: hidden;
+                }
+                .uno{
+                    position: absolute;
+                    top: 0;
+                    left: 20px;
+                    box-shadow: 4px 4px 10px rgba(0, 0, 0, .35);
+                    background: url("../img/otros/1.jpg");
+                    background-size: cover;
+                    background-position: center;
+                }
+                .dos{
+                    width: 50%;
+                    height: 70%;
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    box-shadow: 4px 4px 10px rgba(0, 0, 0, .35);
+                    background: url("../img/otros/2.jpg");
+                    background-size: cover;
+                    background-position-x: left;
+                    background-position-y: center;
+                }
+            }
+            p{
+                width: 55%;
+                text-align: justify;
+                padding-right: 20px;
+            }
+        }
+    }
+}
+
+@media only screen and(max-width: 1100px){
+    .acerca{
+        position: relative;
+        padding-bottom: 40vh;
+        background: linear-gradient(to bottom, $blanco, $gris, $gris, $gris);
+        .escritorio{
+            display: none;
+        }
+        .movil{
+            display: block;
+        }
+        .img-fondo{
+            position: absolute;
+            bottom: 0;
+            z-index: 200;
+            width: 100%;
+            height: 60vh;
+            background: url("../img/backgrounds/acerca.jpg");
+            background-position: center;
+            background-size: cover;
+            &::after{
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 120px;
+                background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+                z-index: 300;
+            }
+        }
+        .contenido{
+            width: 90%;
+            z-index: 500;
+            padding: 60px 30px;
+            height: auto;
+            .titulo{
+                margin: 0;
+            }
+            .contenedor{
+                flex-direction: column;
+                p{
+                    width: 100%;
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+}

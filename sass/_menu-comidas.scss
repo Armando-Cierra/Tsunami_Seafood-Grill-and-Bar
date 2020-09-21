@@ -1,0 +1,55 @@
+.menu-comidas{
+    display: block;
+    height: 75px;
+    width: 100%;
+    position: fixed;
+    top: 90px;
+    left: 0;
+    background: $gris;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .35);
+    z-index: 990;
+    transition: ease-in-out .25s;
+    .contenedor{
+        display: flex;
+        justify-content: space-between;
+        a{
+            display: inline-block;
+            height: 100%;
+            padding: 0 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: .83rem;
+            transition: ease-in-out .15s;
+            &:hover{
+                color: $celeste;
+            }
+        }
+    }
+}
+
+.menu-comidas2{
+    display: none;
+}
+
+@media only screen and(max-width: 800px){
+    .menu-comidas{
+        display: none;
+    }
+    .menu-comidas2{
+        display: block;
+        top: 0;
+        .contenedor{
+            white-space: nowrap;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            -ms-overflow-style: -ms-autohiding-scrollbar;
+            &::-webkit-scrollbar{
+                display: none;
+            }
+            a{
+                font-size: 1rem;
+            }
+        }
+    }
+}

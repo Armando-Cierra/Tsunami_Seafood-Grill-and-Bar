@@ -1,0 +1,113 @@
+.sabores{
+    padding-top: 80px;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    .texto{
+        width: 100%;
+        .contenedor{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0 20px;
+            p{
+                width: 75%;
+                text-align: center;
+                margin-bottom: 80px;
+            }
+        }
+    }
+    .imagenes{
+        background: $gris;
+        width: 100%;
+        padding: 80px 0;
+        padding-bottom: 120px;
+        .contenedor{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 60px;
+            padding: 0 40px;
+            .img{
+                height: 400px;
+                box-shadow: 0 0 25px rgba(0, 0, 0, .25);
+            }
+            .uno{
+                background: url("../img/otros/3.jpg");
+                background-size: cover;
+                background-position: center;
+            }
+            .dos{
+                background: url("../img/otros/4.jpg");
+                background-size: cover;
+                background-position: center;
+            }
+            .tres{
+                background: url("../img/otros/5.jpg");
+                background-size: cover;
+                background-position: center;
+            }
+        }
+    }
+}
+
+//tablets
+@media only screen and(max-width: 1100px){
+    .sabores{
+        min-height: auto;
+        .texto{
+            p{
+                display: none;
+            }
+        }
+        .imagenes{
+            padding: 40px 0px;
+            background: $blanco;
+            .contenedor{
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(2, 1fr);
+                grid-gap: 30px;
+                padding: 0 30px;
+                min-height: 650px;
+                .img{
+                    height: auto;
+                    box-shadow: 0 0 25px rgba(0, 0, 0, 0);
+                }
+                .uno{
+                    grid-column-start: 1;
+                    grid-column-end: 3;
+                    grid-row-start: 1;
+                    grid-row-end: 2;
+                }
+                .dos{
+                    grid-column-start: 1;
+                    grid-column-end: 2;
+                    grid-row-start: 2;
+                    grid-row-end: 4;
+                }
+                .tres{
+                    grid-column-start: 2;
+                    grid-column-end: 3;
+                    grid-row-start: 2;
+                    grid-row-end: 4;
+                }
+            }
+        }
+    }
+}
+
+//Phones
+@media only screen and(max-width: 599px){
+    .sabores{
+        padding-top: 40px;
+        .imagenes{
+            .contenedor{
+                min-height: 400px;
+                grid-gap: 15px;
+                padding: 0 15px;
+            }
+        }
+    }
+}
