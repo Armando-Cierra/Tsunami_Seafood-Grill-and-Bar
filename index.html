@@ -285,10 +285,16 @@
     </section>
     <!--Footer-->
     <footer>
-        <p>© TSUNAMI 2019 | All Rights Reserved</p>
+        <p id="footer"></p>
     </footer>
 
     <!--Scripts-->
+    <script>
+        const footer = document.querySelector('#footer')
+        const year = new Date().getFullYear()
+
+        footer.innerHTML = `© TSUNAMI ${year} | All Rights Reserved`
+    </script>
     <script src="js/menu-movil.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/menu-comida.js"></script>
